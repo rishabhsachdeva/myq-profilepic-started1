@@ -1,0 +1,96 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "dd.com.myq"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 5
+        versionName "1.1.1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true //important
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':library')
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    compile 'com.bitly:bitlysdk:+'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.scottyab:showhidepasswordedittext:0.8'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.apache.httpcomponents:httpclient:4.5.1'
+    compile 'org.apache.httpcomponents:httpmime:4.5.1'
+
+
+    compile 'com.amazonaws:aws-android-sdk-s3:2.+'
+
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.rosaloves:bitlyj:2.0.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //add this line
+    compile 'com.google.firebase:firebase-auth:11.0.2'
+    compile 'com.googlecode.android-query:android-query:0.25.9'
+    compile 'com.google.android.gms:play-services-location:11.0.2'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.github.bmarrdev:android-DecoView-charting:v0.9.3'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.google.android.gms:play-services-analytics:11.0.2'
+    compile 'com.jakewharton:butterknife:5.1.2'
+    compile 'com.google.firebase:firebase-messaging:11.0.2'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    testCompile 'junit:junit:4.12'
+    apply plugin: 'com.google.gms.google-services'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.rosaloves:bitlyj:2.0.0'
+    compile 'io.branch.sdk.android:library:2.10.3'
+}
+
+dependencies {
+
+    compile 'com.android.support:recyclerview-v7:25.0.+'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.android.gms:play-services:11.0.2'
+}
+dependencies {
+    compile 'com.android.support:support-v4:25.+'
+}
+apply plugin: 'com.google.gms.google-services'

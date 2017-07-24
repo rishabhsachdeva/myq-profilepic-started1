@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_referral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="0dp"
+    tools:context="dd.com.myq.Activity.Referral">
+
+
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="20sp"
+        android:text="Referral"
+        android:layout_marginTop="12dp"
+        android:id="@+id/ref"
+        />
+
+
+    <RelativeLayout
+        android:elevation="8dp"
+        android:layout_below="@+id/ref"
+        android:background="@drawable/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:id="@+id/formula"
+            tools:text="123"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:layout_below="@+id/points"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <View
+            android:id="@+id/line_up"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorGreyDark"
+            android:layout_below="@id/formula"
+            />
+
+        <RelativeLayout
+            android:id="@+id/chart_container"
+            android:layout_below="@id/line_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="18dp"
+            >
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="15sp"
+            android:text=" Your Referral Link : "
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textcode"
+            android:layout_below="@+id/chart_container"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="12sp"
+            android:text="(click to share)"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/clickToShare"
+            android:layout_below="@+id/textcode"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:id="@+id/ima"
+            android:src="@drawable/referral_icon"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="45sp"
+            android:id="@+id/points"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/point_date"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="22sp"
+            android:id="@+id/link"
+            android:layout_below="@+id/clickToShare"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/point_date"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refferal points acquired till 23 May 2017 :"
+            android:textSize="15sp"
+            android:textColor="@color/colorGreyDark"
+            android:layout_below="@+id/ima"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context="dd.com.myq.Activity.HomeActivity">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_bar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_picture_container"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/avatar_4"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name"
+            android:text="username"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@id/profile_picture_container"
+            android:layout_toEndOf="@id/profile_picture_container"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+
+            />
+
+        <RelativeLayout
+            android:clickable="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/category_container"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <!--<ImageView-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="21dp"-->
+                <!--android:id="@+id/category_image"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--android:layout_marginEnd="10dp"-->
+                <!--android:src="@drawable/silver_trophy"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--/>-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/medal_silver"
+                android:layout_width="45dp"
+                android:layout_centerVertical="true"
+                android:layout_height="45dp"
+                android:src="@drawable/silver_trophy"
+                android:visibility="invisible"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/medal_bronze"
+                android:layout_width="45dp"
+                android:layout_centerVertical="true"
+                android:layout_height="45dp"
+                android:src="@drawable/bronze_trophy"
+                android:visibility="invisible"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/medal_gold"
+                android:layout_width="45dp"
+                android:layout_centerVertical="true"
+                android:layout_height="45dp"
+                android:src="@drawable/gold_trophy"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:isScrollContainer="true"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <RelativeLayout
+            android:id="@+id/challenge_rank_tab"
+            android:background="@drawable/bottom_bar_items"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                >
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rank: "
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/rank_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="4"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/rank_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/rank_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1000"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/challenge_points_tab"
+            android:background="@drawable/bottom_bar_items"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                >
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Points: "
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/challenge_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1000"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<FrameLayout-->
+    <!--android:layout_below="@id/top_bar"-->
+    <!--android:layout_above="@id/bottom_bar"-->
+    <!--android:id="@+id/main_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="fill_parent">-->
+    <!--</FrameLayout>-->
+
+    <FrameLayout
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom_bar"
+        android:id="@+id/challenges_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/challenges_report_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report Question"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:textColor="@color/orange"
+                android:background="@color/colorWhite"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/top_bar"
+            android:layout_above="@id/bottom_bar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/challenges_buttons"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/challenges_false_button"
+                    android:gravity="center"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/false_btn"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  />
+
+
+                <Button
+                    android:id="@+id/challenges_true_button"
+                    android:background="@drawable/true_btn"
+                    android:gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_above="@id/challenges_buttons">
+
+                <TextView
+                    android:id="@+id/challenges_questionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"/>
+
+                <TextSwitcher
+                    android:id="@+id/challenges_switcher"
+                    android:textSize="25sp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorGreyDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

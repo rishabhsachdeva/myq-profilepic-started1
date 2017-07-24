@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+        <TextView
+            android:id="@+id/report_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Question"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:textColor="@color/orange"
+            android:background="@color/colorWhite"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom_bar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/buttons"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/false_button"
+                android:gravity="center"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/false_btn"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  />
+
+
+            <Button
+                android:id="@+id/true_button"
+                android:background="@drawable/true_btn"
+                android:gravity="center"
+                android:layout_marginLeft="3dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_above="@id/buttons"
+            >
+
+            <TextView
+                android:id="@+id/questionText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"/>
+
+            <TextSwitcher
+                android:id="@+id/switcher"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorGreyDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="18dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--<com.lorentzos.flingswipe.SwipeFlingAdapterView-->
+    <!--android:id="@+id/frame"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:rotation_degrees="15.5"-->
+    <!--tools:context=".MyActivity" />-->
+    <!--<include layout="@layout/buttons" />-->
+</FrameLayout>

@@ -1,0 +1,23 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_layout_root"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <!--<ImageView-->
+        <!--android1:id="@+id/imageView1"-->
+        <!--android1:layout_width="wrap_content"-->
+        <!--android1:layout_height="match_parent"-->
+        <!--android1:src="@drawable/red_heart" />-->
+
+    <TextView
+        android1:id="@+id/toast_text"
+        tools:text="Incorrect"
+        android1:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+</LinearLayout>
